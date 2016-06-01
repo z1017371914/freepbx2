@@ -1,7 +1,8 @@
 #!/bin/bash
-
-sudo apt-get update && apt-get upgrade -y
-DEBIAN_FRONTEND=noninteractive sudo apt-get install mysql-server
+export DEBIAN_FRONTEND=noninteractive
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo -E apt-get install mysql-server
 sudo apt-get install -y build-essential linux-headers-`uname -r` openssh-server mysql-client apache2\
   bison flex php5 php5-curl php5-cli php5-mysql php-pear php5-gd curl sox\
   libncurses5-dev libssl-dev libmysqlclient-dev mpg123 libxml2-dev libnewt-dev sqlite3\
